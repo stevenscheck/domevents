@@ -4,3 +4,29 @@ button.addEventListener('click', function (){
     count.textContent = Number(count.textContent) +1
 })
 
+let p = document.querySelector("#placeholder")
+
+const button2 = document.querySelector("#grow")
+grow.addEventListener("click", function(){
+    
+    style = window.getComputedStyle(p, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    p.style.fontSize = (currentSize + 5)+"px"    
+
+})
+
+const button3 = document.querySelector("#shrink")
+shrink.addEventListener("click", function(){
+    
+    style = window.getComputedStyle(p, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    p.style.fontSize = (currentSize - 5)+"px"    
+
+})
+
+const color = document.querySelector('#colorButton')
+const input = document.querySelector('input')
+const body = document.querySelector('body')
+ color.addEventListener('click', function(){
+    body.style.backgroundColor = input.value
+ })
