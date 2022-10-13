@@ -11,9 +11,9 @@ down.addEventListener('click', function(){
  })
 
  up.addEventListener('click', function(){
-    style = window.getComputedStyle(crane, null).getPropertyValue('margin-bottom');
+    style = window.getComputedStyle(crane, null).getPropertyValue('margin-top');
     currentSize = parseFloat(style);
-    crane.style.marginBop = (currentSize + 25)+"px"  
+    crane.style.marginTop = (currentSize - 25)+"px"  
  })
 
  left.addEventListener('click', function(){
